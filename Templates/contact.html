@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #111827;
+    color: #f3f4f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.contact-form {
+    width: 320px;
+    border-radius: 0.75rem;
+    background-color: rgba(17, 24, 39, 1);
+    padding: 2rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Label styles */
+label {
+    display: block;
+    color: rgba(156, 163, 175, 1);
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+}
+
+/* Input fields and textarea */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    border: 1px solid rgba(55, 65, 81, 1);
+    background-color: rgba(17, 24, 39, 1);
+    color: #f3f4f6;
+    outline: none;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+/* Focus effect on inputs and textarea */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: rgba(167, 139, 250, 1);
+}
+
+/* Button styling */
+button {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    border: none;
+    background-color: rgba(167, 139, 250, 1);
+    color: rgba(17, 24, 39, 1);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover and active states for the button */
+button:hover {
+    background-color: rgba(139, 92, 246, 1);
+}
+
+button:active {
+    background-color: rgba(124, 58, 237, 1);
+}
+
+/* Thank you message styling */
+.thank-you-message {
+    text-align: center;
+    margin-top: 1.5rem;
+    color: #28a745;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+    </style>
+</head>
+<body>
+    <div class="contact-form">
+        <h1>Contact Us</h1>
+        <form method="POST" action="{{ url_for('contact') }}">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

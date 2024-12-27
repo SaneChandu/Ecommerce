@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="POST">
+        <label for="">Item Name:</label>
+        <input type="text" value="{{items[0]}}" name="name" id="" placeholder="Enter item name"><br><br>
+        <label for="">Item Description:</label>
+        <input value="{{items[1]}}" type="text"  name="desc" id="" placeholder="Enter item description" ><br><br>
+        <label for="">Item Quantity:</label>
+        <input type="text" value="{{items[2]}}" name="qty" id="" placeholder="Enter item quantity"><br><br>
+        <label for="">Category:</label>
+        <select value="{{items[3]}}" name="category" id="">
+            <option value="electronics">electronics</option>
+            <option value="grocery">grocery</option>
+            <option value="fashion">fashion</option>
+            <option value="home">home</option>
+        </select><br><br>
+        <label for="">Item Price:</label>
+        <input type="text" value="{{items[4]}}" name="price" id="" placeholder="Enter item price"><br><br>
+        
+        <input type="submit" class="btn" value="Update">
+</body>
+</html>

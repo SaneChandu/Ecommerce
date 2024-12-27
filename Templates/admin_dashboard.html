@@ -1,0 +1,25 @@
+<!-- admin_dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/static/adminboard.css">
+</head>
+<body>
+    <h1>Welcome to the Admin Dashboard</h1>
+    <p>Total Orders: {{ total_orders }}</p>
+    <p>Total Users: {{ total_users }}</p>
+    <p>Total Items: {{ total_items }}</p>
+    
+    <h2>Actions</h2>
+    <ul>
+        <li><a href="{{ url_for('status') }}">View All Products</a></li>
+        <li><a href="{{ url_for('dashboardpage') }}">View All Orders</a></li>
+        <li><a href="{{ url_for('additems') }}">Add New Item</a></li>
+    </ul>
+    
+    <a href="{{ url_for('adminlogout') }}">Logout</a>
+</body>
+</html>
